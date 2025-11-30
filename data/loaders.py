@@ -29,12 +29,19 @@ def read_gnt(path):
             bitmap = np.frombuffer(bitmap_data, dtype=np.uint8).reshape((height, width))
 
             samples.append({
-                "tag_code": tag_code,         # e.g. 'a1b0'
+                "tag_code": tag_code,         # GB2312 LABEL
                 "width": width,
                 "height": height,
                 "bitmap": bitmap
             })
 
     return samples
+
+samples = read_gnt("C:/Users/natha/OneDrive/Documents/Desktop/Choom/Choom/data/raw/001-f.gnt")
+
+
+for s in samples[:5]:
+    print(f"Character: {s['tag_code']}, Size: {s['width']}x{s['height']}")
+
 
 
