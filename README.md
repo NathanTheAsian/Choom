@@ -4,7 +4,7 @@ A project for training and testing Chinese character recognition using CNN model
 
 ## Features
 
-* Convert `.gnt` files to PNG visualizations
+* Convert `.gnt` files to PNG visualizations (with GB2312 data and simplified Chinese character data)
 * Clean, readable CNN architecture for classification
 * Data loaders for custom dataset ingestion
 * Utilities for experimenting with different model architectures
