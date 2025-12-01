@@ -46,6 +46,7 @@ def read_gnt(path):
             img.save(png_path)
 
             # ---- 7. Decode character
+
             try:
                 char = tag_bytes.decode("gb2312")
             except:

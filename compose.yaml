@@ -1,0 +1,6 @@
+services:
+  choom:
+    image: choom
+    build:
+      context: .
+      dockerfile: ./Dockerfile
