@@ -68,7 +68,19 @@ def read_gnt(path):
             index += 1
 
     return samples
+    
 
+def save_samples(samples):
+    with open("C:/Users/natha/OneDrive/Documents/Desktop/choom/choom/output/samples.txt", "a", encoding="utf-8") as file:
+        for sample in samples:
+            file.write(
+                f"GB2312: {sample['tag_code']}, "
+                f"Char: {sample['char']}, "
+                f"Size: {sample['width']}x{sample['height']}, "
+                f"File: {sample['fileName']}\n"
+            )
+    
 
 # Run it
 samples = read_gnt("C:/Users/natha/OneDrive/Documents/Desktop/Choom/Choom/data/raw/001-f.gnt")
+save_samples(samples)
